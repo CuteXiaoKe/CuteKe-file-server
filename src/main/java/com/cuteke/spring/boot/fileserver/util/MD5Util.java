@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
  * MD5 工具类.
  * 
  * @since 1.0.0 2017年3月28日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @author <a href="https://www.cuteke.cn">CuteKe</a> 
  */
 public class MD5Util {
 

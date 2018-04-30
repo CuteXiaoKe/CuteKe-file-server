@@ -18,7 +18,7 @@ import com.cuteke.spring.boot.fileserver.repository.FileRepository;
  * File 服务.
  * 
  * @since 1.0.0 2017年7月30日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @author <a href="https://www.cuteke.cn">CuteKe</a> 
  */
 @Service
 public class FileServiceImpl implements FileService {

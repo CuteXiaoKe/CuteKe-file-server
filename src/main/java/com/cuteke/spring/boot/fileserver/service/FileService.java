@@ -12,7 +12,7 @@ import com.cuteke.spring.boot.fileserver.domain.File;
  * File 服务接口.
  * 
  * @since 1.0.0 2017年3月28日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @author <a href="https://www.cuteke.cn">CuteKe</a> 
  */
 public interface FileService {
 	/**

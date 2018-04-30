@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 /**
  * Hello World 控制器测试类
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @author <a href="https://www.cuteke.cn">CuteKe</a> 
  * @date 2017年1月26日
  */
 @RunWith(SpringRunner.class)
