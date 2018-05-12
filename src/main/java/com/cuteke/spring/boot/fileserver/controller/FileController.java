@@ -29,6 +29,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.cuteke.spring.boot.fileserver.domain.File;
 import com.cuteke.spring.boot.fileserver.util.MD5Util;
 
+import javax.naming.SizeLimitExceededException;
+
 @CrossOrigin(origins = "*", maxAge = 3600) // 允许所有域名访问
 @Controller
 public class FileController {
@@ -130,7 +132,7 @@ public class FileController {
 			ex.printStackTrace();
 			redirectAttributes.addFlashAttribute("message", "Your " + file.getOriginalFilename() + " is wrong!");
 			return "redirect:/";
-		}
+		} 
 
 		redirectAttributes.addFlashAttribute("message",
 				"You successfully uploaded " + file.getOriginalFilename() + "!");
