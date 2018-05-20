@@ -1,0 +1,78 @@
+        body {
+            font-family: MicrosoftYaHei;
+            font-size: 9.75pt;
+            color: #777777;
+        }
+
+        .leftImage {
+            width: 35px;
+            height: 35px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .rightImage {
+            width: 100px;
+            height: 130px;
+            float: right;
+            border-radius: 10px;
+            margin-right: -80px;
+        }
+
+        .hrStyle1 {
+            margin-left: 40px;
+            height: 2px;
+            width: 470px;
+            background-color: #5694c3;
+            border: none
+        }
+
+        .hrStyle2 {
+            margin-left: 40px;
+            height: 2px;
+            width: 650px;
+            background-color: #5694c3;
+            border: none
+        }
+
+        .fontStyle {
+            color: #5694c3;
+            font-weight: bold;
+            margin-top: 2px;
+            margin-bottom: -10px;
+            font-size: 12.75pt;
+            margin-left: 42px;
+        }
+
+        .alignDiv {
+            margin-left: 50px;
+            margin-top: 0px;
+        }
+
+        table {
+            margin-top: 10px;
+        }
+
+        td {
+            padding-top: 1px;
+        }
+
+        .rightTd {
+            padding-left: 65px;
+        }
+
+        .rightTd2 {
+            padding-left: 80px;
+        }
+
+        .rightTd3 {
+            padding-left: 150px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        li {
+            margin-left: -10px;
+        }

@@ -6,7 +6,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Optional;
 
+import com.cuteke.spring.boot.fileserver.VO.Response;
 import com.cuteke.spring.boot.fileserver.service.FileService;
+import com.cuteke.spring.boot.fileserver.util.FileUtil;
 import org.bson.types.Binary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -44,7 +46,7 @@ public class FileController {
 	@Value("${server.port}")
 	private String serverPort;
 
-	@RequestMapping(value = "/")
+	@RequestMapping(value = "/allFiles")
 	public String index(Model model) {
 		// 展示最新二十条数据
 		model.addAttribute("files", fileService.listFilesByPage(0, 20));
@@ -137,7 +139,7 @@ public class FileController {
 		redirectAttributes.addFlashAttribute("message",
 				"You successfully uploaded " + file.getOriginalFilename() + "!");
 
-		return "redirect:/";
+		return "redirect:/allFiles";
 	}
 
 	/**
@@ -156,7 +158,7 @@ public class FileController {
 			f.setMd5(MD5Util.getMD5(file.getInputStream()));
 			returnFile = fileService.saveFile(f);
 			if(serverAddress.equals("0.0.0.0"))
-				serverAddress="139.199.63.129";
+				serverAddress="localhost";
 			String path = "//" + serverAddress + ":" + serverPort + "/view/" + returnFile.getId();
 			return ResponseEntity.status(HttpStatus.OK).body(path);
 
@@ -164,9 +166,31 @@ public class FileController {
 			ex.printStackTrace();
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
 		}
-
 	}
+	
+	@PostMapping("/avator/upload")
+	public ResponseEntity<Response> handleAvatorUpload(@RequestParam("file") MultipartFile file){
+		File returnFile = null;
+		try {
+			File f = new File(file.getOriginalFilename(), file.getContentType(), file.getSize(),
+					new Binary(file.getBytes()));
+			f.setMd5(MD5Util.getMD5(file.getInputStream()));
+			FileUtil.savePic(file.getInputStream(),file.getOriginalFilename());
+			String fileName = file.getOriginalFilename();
+			Response response=new Response(true,"上传头像成功！",fileName);
+			return ResponseEntity.status(HttpStatus.OK).body(response);
 
+		} catch (IOException | NoSuchAlgorithmException ex) {
+			ex.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new Response(false,ex.getMessage(),null));
+		}
+	}
+	
+	
+
+	
+	
+	
 	/**
 	 * 删除文件
 	 * 
@@ -179,7 +203,7 @@ public class FileController {
 
 		try {
 			fileService.removeFile(id);
-			return ResponseEntity.status(HttpStatus.OK).body("DELETE Success!");
+			return ResponseEntity.status(HttpStatus.OK).body("DELETE SUCCESS");
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
 		}

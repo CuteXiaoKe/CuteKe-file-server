@@ -17,21 +17,21 @@ import com.cuteke.spring.boot.fileserver.domain.File;
 public interface FileService {
 	/**
 	 * 保存文件
-	 * @param File
+	 * @param 
 	 * @return
 	 */
 	File saveFile(File file);
 	
 	/**
 	 * 删除文件
-	 * @param File
+	 * @param 
 	 * @return
 	 */
 	void removeFile(String id);
 	
 	/**
 	 * 根据id获取文件
-	 * @param File
+	 * @param 
 	 * @return
 	 */
 	Optional<File> getFileById(String id);

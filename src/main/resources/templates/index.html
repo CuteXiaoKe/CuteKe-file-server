@@ -31,6 +31,8 @@
         <td>size</td>
         <td>uploadDate</td>
         <td>md5</td>
+        <td>操作1</td>
+        <td>操作2</td>
     </tr>
     </thead>
     <tbody>
@@ -44,11 +46,15 @@
         <td th:text="${file.size}" ></td>
         <td th:text="${file.uploadDate}" ></td>
         <td th:text="${file.md5}" ></td>
+        <td><a th:href="'/'+${file.id}" th:text="删除文件" onclick="deleteId(this);return false;"/></td>
+        <td><a th:href="'view/'+${file.id}" th:text="查看文件" target="view_window"/></td>
     </tr>
     </tbody>
 </table>
 </div>
 
 <div th:replace="~{fragments/footer :: footer}">...</div>
+<script src="../../js/index.js" th:src="@{/js/index.js}"></script>
+<script src="../../js/jquery-3.1.1.min.js" th:src="@{/js/jquery-3.1.1.min.js}"></script>
 </body>
 </html>

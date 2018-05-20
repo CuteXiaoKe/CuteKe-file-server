@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resume>
+  <person>
+    <name>周旷</name>
+    <birth>1993.03</birth>
+    <telephone>18081878375</telephone>
+    <politics>中共党员</politics>
+    <email>343649190@qq.com</email>
+    <target>Android 开发工程师</target>
+    <location>四川省内江市</location>
+    <imgName>hdImg_3c5e22d6447d902cd346c5db449ee11b15026970921.jpg</imgName>
+  </person>
+  <education>
+    <educationOne>
+      <date>2015-09-2018-06</date>
+      <school>电子科技大学</school>
+      <major>计算机应用技术（硕士）</major>
+    </educationOne>
+    <educationOne>
+      <date>2013-09-2015-06</date>
+      <school>电子科技大学</school>
+      <major>计算机科学与技术（本科）</major>
+    </educationOne>
+    <educationOne>
+      <date>2011-09-2013-06</date>
+      <school>电子科技大学</school>
+      <major>光电信息（本科）</major>
+    </educationOne>
+  </education>
+  <skill>
+    <skillOne>熟练掌握 Android 开发相关技术，如进程间通信、事件分发、自定义布局、数据存储、多线程等，</skillOne>
+    <skillOne>熟悉Android基本组件与系统架构，了解部分 Android 开源框架，能够独立完成 Android 应用的开发工作；</skillOne>
+    <skillOne>熟练掌握 Java 语言及其特性，熟悉 Java 多线程、集合容器、面向对象等，并对 JVM 有一定了解；</skillOne>
+    <skillOne>熟练掌握常用数据结构和算法，理解常用设计模式；</skillOne>
+    <skillOne>了解计算机网络、数据库、操作系统等基本知识。</skillOne>
+  </skill>
+  <practice>
+    <practiceOne>
+      <company>成都网域复兴科技有限公司</company>
+      <department>产品研发部</department>
+      <date>2016-09~2017-06</date>
+      <description>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;负责公司移动端产品的技术调研，进行方案设计和验证，负责 Android端相关功能的代码实现和维护。参与 Android 蚁控系统项目的需求分析、前期设计，提出 Android 端实现控制的方案，进行可行性分析，编码实现 Android 控制脚本和 Android 控制 APP，进行Android 端系统测试和维护。</description>
+    </practiceOne>
+  </practice>
+  <project>
+    <projectOne>
+      <name>Android 平台蚁控系统</name>
+      <duty>主研</duty>
+      <date>2016-09~2017-06</date>
+      <introduction>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;该系统主要用于微信账号运营，可通过一台控制 PC同时管理多台手机设备。系统可完成设备控制（如导入通讯录、 切换 GPS 坐标等）与微信控制（如群发消息、加群好友、删除僵尸粉等），并通过 Web 对手机界面进行投影与控制，具有一定的容错能力，能够适配不同的系统版本与手机型号。</introduction>
+      <job>
+        <jobOne>参与需求分析，项目讨论，完全负责 Android 端系统的设计、编码、测试和维护；</jobOne>
+        <jobOne>实现用于系统控制的辅助 APP，该 APP 通过接收广播的方式对系统进行设置，能稳定运行于主流安卓系统；</jobOne>
+        <jobOne>使用 Python 实现微信控制脚本，该脚本通过 ADB调试桥，对微信界面进行布局分析，尽量兼容不同的手机屏幕和分辨率，根据具体的业务需求对微信界面进行自动点击或者输入操作；</jobOne>
+        <jobOne>实现 Andorid Accessibility 程序，该程序需要适配具体的手机机型，用于对异常界面（授权等界面）进行快速判断和点击；</jobOne>
+        <jobOne>使用开源 Native 项目（openSTF）实现手机屏幕到 WEB 的映射以及 WEB 点击到手机的映射；</jobOne>
+      </job>
+    </projectOne>
+  </project>
+  <honor>
+    <honorOne>
+      <date>2017年</date>
+      <info>华为软件精英挑战赛成渝赛区二等奖</info>
+    </honorOne>
+    <honorOne>
+      <date>2014年</date>
+      <info>第六届华为创新杯编程大赛十六强</info>
+    </honorOne>
+  </honor>
+</resume>
